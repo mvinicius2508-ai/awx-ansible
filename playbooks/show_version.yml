@@ -1,0 +1,9 @@
+- name: Teste Cisco IOS
+  hosts: sw_cisco
+  gather_facts: no
+
+  tasks:
+    - name: Coletar show version
+      cisco.ios.ios_command:
+        commands:
+          - show version
