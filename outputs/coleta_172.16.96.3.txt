@@ -1,0 +1,412 @@
+========= COMANDOS LEVES =========
+Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Version 15.2(4.0.55)E, TEST ENGINEERING ESTG_WEEKLY BUILD, synced to  END_OF_FLO_ISP
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2015 by Cisco Systems, Inc.
+Compiled Tue 28-Jul-15 18:52 by sasyamal
+
+
+ROM: Bootstrap program is IOSv
+
+Switch uptime is 7 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios_l2-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv () processor (revision 1.0) with 3056889K/111616K bytes of memory.
+Processor board ID 92XFPYFJVQ6
+1 Virtual Ethernet interface
+8 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+2097152K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+Configuration register is 0x0\n\n==============================\n\n\n\n==============================\n\nInterface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0     unassigned      YES unset  up                    up      
+GigabitEthernet0/1     unassigned      YES unset  down                  down    
+GigabitEthernet0/2     unassigned      YES unset  up                    up      
+GigabitEthernet0/3     unassigned      YES unset  down                  down    
+GigabitEthernet1/0     unassigned      YES unset  down                  down    
+GigabitEthernet1/1     unassigned      YES unset  down                  down    
+GigabitEthernet1/2     unassigned      YES unset  down                  down    
+GigabitEthernet1/3     unassigned      YES unset  down                  down    
+Vlan99                 172.16.96.3     YES NVRAM  up                    up\n\n==============================\n\nInterface                      Status         Protocol Description
+Gi0/0                          up             up       
+Gi0/1                          down           down     
+Gi0/2                          up             up       SERVIDOR-AUTOMACAO
+Gi0/3                          down           down     
+Gi1/0                          down           down     
+Gi1/1                          down           down     
+Gi1/2                          down           down     
+Gi1/3                          down           down     
+Vl99                           up             up       AUTOMACAO\n\n==============================\n\nPort      Name               Status       Vlan       Duplex  Speed Type 
+Gi0/0                        connected    trunk        auto   auto unknown
+Gi0/1                        notconnect   1            auto   auto unknown
+Gi0/2     SERVIDOR-AUTOMACAO connected    99           auto   auto unknown
+Gi0/3                        notconnect   1            auto   auto unknown
+Gi1/0                        notconnect   1            auto   auto unknown
+Gi1/1                        notconnect   1            auto   auto unknown
+Gi1/2                        notconnect   1            auto   auto unknown
+Gi1/3                        notconnect   1            auto   auto unknown\n\n==============================\n\nVLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Gi0/1, Gi0/3, Gi1/0, Gi1/1, Gi1/2, Gi1/3
+99   AUTOMACAO                        active    Gi0/2
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup\n\n==============================\n\n\n\n==============================\n\nCodes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override
+
+Gateway of last resort is not set
+
+      172.16.0.0/16 is variably subnetted, 2 subnets, 2 masks
+C        172.16.96.0/27 is directly connected, Vlan99
+L        172.16.96.3/32 is directly connected, Vlan99\n\n==============================\n\nTotal cdp entries displayed : 0\n\n==============================\n\n% LLDP is not enabled\n\n==============================\n\nFlags:  D - down        P - bundled in port-channel
+        I - stand-alone s - suspended
+        H - Hot-standby (LACP only)
+        R - Layer3      S - Layer2
+        U - in use      N - not in use, no aggregation
+        f - failed to allocate aggregator
+
+        M - not in use, minimum links not met
+        m - not in use, port not aggregated due to minimum links not met
+        u - unsuitable for bundling
+        w - waiting to be aggregated
+        d - default port
+
+        A - formed by Auto LAG
+
+
+Number of channel-groups in use: 0
+Number of aggregators:           0
+
+Group  Port-channel  Protocol    Ports
+------+-------------+-----------+-----------------------------------------------
+
+========= SHOW RUNNING-CONFIG =========
+Building configuration...
+
+Current configuration : 3507 bytes
+!
+! Last configuration change at 02:09:52 UTC Sat May 2 2026
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname Switch
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$5u2I$UmCYWUbaLdtyo/OTPAKep0
+!
+username admin privilege 15 secret 5 $1$MC2q$RoFKHfc0ytd8P2yqwBlvu/
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+ip domain-name lab.local
+ip cef
+no ipv6 cef
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ media-type rj45
+ duplex full
+ no negotiation auto
+!
+interface GigabitEthernet0/1
+ media-type rj45
+ duplex full
+ no negotiation auto
+!
+interface GigabitEthernet0/2
+ description SERVIDOR-AUTOMACAO
+ switchport access vlan 99
+ switchport mode access
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet0/3
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet1/0
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet1/1
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet1/2
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet1/3
+ media-type rj45
+ negotiation auto
+!
+interface Vlan99
+ description AUTOMACAO
+ ip address 172.16.96.3 255.255.255.224
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+ip ssh version 2
+!
+!
+!
+!
+!
+control-plane
+!
+banner exec ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner incoming ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner login ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+!
+line con 0
+ exec-timeout 30 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ exec-timeout 30 0
+ privilege level 15
+ login local
+ transport input ssh
+!
+!
+end
+
+========= SHOW STARTUP-CONFIG =========
+Using 1800 out of 262144 bytes, uncompressed size = 3507 bytes
+!
+! Last configuration change at 02:09:52 UTC Sat May 2 2026
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname Switch
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$5u2I$UmCYWUbaLdtyo/OTPAKep0
+!
+username admin privilege 15 secret 5 $1$MC2q$RoFKHfc0ytd8P2yqwBlvu/
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+ip domain-name lab.local
+ip cef
+no ipv6 cef
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ media-type rj45
+ duplex full
+ no negotiation auto
+!
+interface GigabitEthernet0/1
+ media-type rj45
+ duplex full
+ no negotiation auto
+!
+interface GigabitEthernet0/2
+ description SERVIDOR-AUTOMACAO
+ switchport access vlan 99
+ switchport mode access
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet0/3
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet1/0
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet1/1
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet1/2
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet1/3
+ media-type rj45
+ negotiation auto
+!
+interface Vlan99
+ description AUTOMACAO
+ ip address 172.16.96.3 255.255.255.224
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+ip ssh version 2
+!
+!
+!
+!
+!
+control-plane
+!
+banner exec ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner incoming ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner login ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+!
+line con 0
+ exec-timeout 30 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ exec-timeout 30 0
+ privilege level 15
+ login local
+ transport input ssh
+!
+!
+end

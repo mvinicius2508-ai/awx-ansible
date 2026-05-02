@@ -1,0 +1,49 @@
+- name: Coletar informacoes do switch Cisco IOS
+  hosts: sw_cisco
+  gather_facts: no
+
+  tasks:
+    - name: Coletar comandos leves
+      cisco.ios.ios_command:
+        commands:
+          - show version
+          - show inventory
+          - show ip interface brief
+          - show interfaces description
+          - show interfaces status
+          - show vlan brief
+          - show vrf
+          - show ip route
+          - show cdp neighbors detail
+          - show lldp neighbors detail
+          - show etherchannel summary
+      
+      register: coleta_leve
+
+    - name: Coletar running-config
+      cisco.ios.ios_command:
+        commands:
+          - show running-config
+        
+      register: running_config
+
+    - name: Coletar startup-config
+      cisco.ios.ios_command:
+        commands:
+          - show startup-config
+        
+      register: startup_config
+
+    - name: Salvar saida em arquivo local
+      copy:
+        content: |
+          ========= COMANDOS LEVES =========
+          {{ coleta_leve.stdout | join('\n\n==============================\n\n') }}
+
+          ========= SHOW RUNNING-CONFIG =========
+          {{ running_config.stdout[0] }}
+
+          ========= SHOW STARTUP-CONFIG =========
+          {{ startup_config.stdout[0] }}
+        dest: "outputs/coleta_{{ inventory_hostname }}.txt"
+  
